@@ -1,9 +1,24 @@
 /* CSS Variables */
+
+
+/*want to use a font that I downloaded and I put inside the assset folder, I attempted to use the line of code directly \
+directly below this comment. But it didnt work; and no, I do not like any of the google font choices,
+ I do not want to import. I fail to see how having a github look at its own fucking folders is so difficult, 
+ I spent hours looking for the information to find the information to get the information on the information
+ on what I want to know; this is not a great "information age". */
+@font-face {
+    font-family: "Harlow Solid Regular";
+    src: url("../../ARTIST-SONG-01/Harlow Solid Regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+
+}
+
 :root {
     /* main UI color */
-    --plyr-color-main: darkgray;
+    --plyr-color-main: mediumblue;
     /* audio controls background */
-    --plyr-audio-controls-background: black;
+    --plyr-audio-controls-background: crimson;
     /* audio controls color */
     --plyr-audio-control-color: white;
     /* font family for player */
@@ -21,7 +36,7 @@
 }
 
 body {
-    background: gray;
+    background: sandybrown;
 }
 
 /* Layout */
@@ -30,7 +45,7 @@ main {
     max-width: 60em;
     margin-inline: auto;
 
-    background: lightgray;
+    background: mintcream;
 }
 
 main img {
@@ -42,14 +57,22 @@ main img {
 /* Primary Content */
 article {
     /* flow content horizontally */
-    display: flex;
-    gap: 1em;
+    display: grid;
+  grid-template-columns: 30% 30% 30% ;
+  grid-template-rows: 38% 38% 38% ;
+    grid-row-start: 3; 
+  grid-row-end: 1;  
+  grid-column-start: 2; 
+  grid-column-end: 3;
+    grid-gap: 2em;
     justify-content: center;
+    
 }
 
 article section {
     /* keep flex'd child same width */
     flex: 1;
+    margin: 10px;
 }
 
 /* Footer */
@@ -62,4 +85,64 @@ footer {
     main article {
         flex-direction: column;
     }
+}
+
+/* Why this fucking won't work, I will have no idea. I will be turning this in as is. I do not understand how you edited the audio element by activating something inside a Codepen's pen settings. Also, If how you did it was not orginally from within Codepen itself. Is there not a way to just play around with a completely fake audio elemnt?*/
+audio {
+    border: solid 10px red;
+}
+
+.six {
+  color: mediumblue;
+}
+
+.five {
+  color: crimson;
+}
+
+.four {
+  color: mediumblue;
+}
+
+.three {
+  color: crimson;
+}
+
+.two {
+  color: mediumblue;
+}
+
+.one {
+  color: crimson;
+}
+
+h1 {
+  border: solid 10px mintcream;
+  outline: solid 10px crimson;
+  padding: 10px;
+   /* box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%); */
+   color: mintcream;
+  background: mediumblue;
+  text-align: center;
+  border-radius: 6px;
+  font-family: "Harlow Solid Regular";
+}
+
+h2 {
+  border: solid 10px mintcream;
+  outline: solid 10px crimson;
+  padding: 10px;
+   /* box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%); */
+   color: mintcream;
+  background: mediumblue;
+  text-align: center;
+  border-radius: 6px;
+}
+
+img {
+    margin: auto;
 }

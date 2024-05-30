@@ -15,6 +15,6 @@
 ## Citations
 * Your citations go here
 
-* [genius](https://genius.com/The-beach-boys-i-get-around-lyrics)
-
-readme test save again
+* [genius lyrics](https://genius.com/The-beach-boys-i-get-around-lyrics)
+* [fonts chosen](https://freefonts.co/fonts/harlow-solid-regular)
+* [notes of design development](https://www.figma.com/design/ObFY78AnP1X5dvqZy5hTE2/song-lyrics-project%3B-web-design-1-assginment?node-id=0-1&t=57zmfwaScnJFP2qs-1)
