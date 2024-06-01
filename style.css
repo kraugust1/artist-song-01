@@ -1,16 +1,14 @@
 /* CSS Variables */
+ @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 
-/*want to use a font that I downloaded and I put inside the assset folder, I attempted to use the line of code directly \
-directly below this comment. But it didnt work; and no, I do not like any of the google font choices,
- I do not want to import. I fail to see how having a github look at its own fucking folders is so difficult, 
- I spent hours looking for the information to find the information to get the information on the information
- on what I want to know; this is not a great "information age". */
-@font-face {
-    font-family: "Harlow Solid Regular";
-    src: url("../../ARTIST-SONG-01/Harlow Solid Regular.ttf") format('truetype');
-    font-style: normal;
-    font-weight: normal;
+ @font-face {
+  font-family: 'Harlow Solid Regular';
+  src: url('fonts/Harlow Solid Regular.woff2') format('woff2'),
+       url('fonts/Harlow Solid Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 
 }
 
@@ -18,9 +16,12 @@ directly below this comment. But it didnt work; and no, I do not like any of the
     /* main UI color */
     --plyr-color-main: mediumblue;
     /* audio controls background */
-    --plyr-audio-controls-background: crimson;
+    --plyr-audio-controls-background: linear-gradient(180deg, #F72121 13.5%, #FFFFFF 46%, #6C72FF 92%);
+
+
+    
     /* audio controls color */
-    --plyr-audio-control-color: white;
+    --plyr-audio-control-color: #a77244;
     /* font family for player */
     --plyr-font-family: sans-serif;
     /* font size of player  */
@@ -29,7 +30,7 @@ directly below this comment. But it didnt work; and no, I do not like any of the
     /* Other optional customiziations */
     --plyr-audio-control-color-hover:  black;
     --plyr-audio-progress-buffered-background:  black;
-    --plyr-audio-range-track-background: white;
+    --plyr-audio-range-track-background: rgb(245, 83, 83);
     --plyr-tooltip-background: white;
     --plyr-tooltip-color: black; 
     --plyr-control-icon-size: 16px;
@@ -73,6 +74,7 @@ article section {
     /* keep flex'd child same width */
     flex: 1;
     margin: 10px;
+    font-family: "Courgette";
 }
 
 /* Footer */
@@ -85,11 +87,6 @@ footer {
     main article {
         flex-direction: column;
     }
-}
-
-/* Why this fucking won't work, I will have no idea. I will be turning this in as is. I do not understand how you edited the audio element by activating something inside a Codepen's pen settings. Also, If how you did it was not orginally from within Codepen itself. Is there not a way to just play around with a completely fake audio elemnt?*/
-audio {
-    border: solid 10px red;
 }
 
 .six {
@@ -128,6 +125,7 @@ h1 {
   text-align: center;
   border-radius: 6px;
   font-family: "Harlow Solid Regular";
+  font-size: 3em;
 }
 
 h2 {
@@ -141,8 +139,35 @@ h2 {
   background: mediumblue;
   text-align: center;
   border-radius: 6px;
+  font-family: "Harlow Solid Regular";
+  font-size: 2.5em;
 }
 
-img {
-    margin: auto;
+div2 {
+  margin-bottom: -70px;
+  display: grid;
+  grid-template-columns: 30% 30% 30% ;
+  grid-template-rows: 30% 30% 30% ;
+  grid-row-start: 3; 
+  grid-row-end: 1;  
+  grid-column-start: 1; 
+  grid-column-end: 1;
+  grid-gap: 2em;
+  margin-left: 12px;
+  
+}
+
+.pic1 {
+  border: solid 11px crimson;
+  border-radius: 6px;
+}
+
+.pic2 {
+  border: solid 10px mintcream;
+  outline: solid 1px #000080;
+  border-radius: 6px;
+}
+.pic3 {
+  border: solid 10px mediumblue;
+  border-radius: 6px;
 }
