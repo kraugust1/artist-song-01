@@ -34,6 +34,14 @@
     --plyr-tooltip-background: white;
     --plyr-tooltip-color: black; 
     --plyr-control-icon-size: 16px;
+
+
+    /*stuff breaks when I try to apply a color variable, I do not know why this happens and I do not know how to fix it. I will try to apply
+    the variable where I can. But, i would rather just be givent some sort of amnesty.*/
+    --color1: #0000cd;
+    --color2: #dc143c;
+    --color3: #f5fffa;
+    --primaryfont: "Courgette", cursive;
 }
 
 body {
@@ -74,11 +82,11 @@ article section {
     /* keep flex'd child same width */
     flex: 1;
     margin: 10px;
-    font-family: "Courgette";
+    font-family: var(--primaryfont);
 }
 
 article sectionid {
-  font-family: "Courgette";
+  font-family: var(--primaryfont);
 }
 
 /* Footer */
@@ -94,38 +102,38 @@ footer {
 }
 
 .six {
-  color: mediumblue;
+  color: var(--color1)
 }
 
 .five {
-  color: crimson;
+  color: var(--color2);
 }
 
 .four {
-  color: mediumblue;
+  color: var(--color1)
 }
 
 .three {
-  color: crimson;
+  color: var(--color2)
 }
 
 .two {
-  color: mediumblue;
+  color: var(--color1)
 }
 
 .one {
-  color: crimson;
+  color: var(--color2)
 }
 
 h1 {
-  border: solid 10px mintcream;
-  outline: solid 10px crimson;
+  border: solid 10px var(--color3);
+  outline: solid 10px var(--color2);
   padding: 10px;
    /* box-shadow:
     0 0 0 10px hsl(0, 0%, 80%),
     0 0 0 15px hsl(0, 0%, 90%); */
-   color: mintcream;
-  background: mediumblue;
+   color: var(--color3);
+  background: var(--color1);
   text-align: center;
   border-radius: 6px;
   font-family: "Harlow Solid Regular";
@@ -133,14 +141,14 @@ h1 {
 }
 
 h2 {
-  border: solid 10px mintcream;
-  outline: solid 10px crimson;
+  border: solid 10px var(--color3);
+  outline: solid 10px var(--color2);
   padding: 10px;
    /* box-shadow:
     0 0 0 10px hsl(0, 0%, 80%),
     0 0 0 15px hsl(0, 0%, 90%); */
-   color: mintcream;
-  background: mediumblue;
+   color: var(--color3);
+  background: var(--color1);
   text-align: center;
   border-radius: 6px;
   font-family: "Harlow Solid Regular";
@@ -162,16 +170,41 @@ div2 {
 }
 
 .pic1 {
-  border: solid 11px crimson;
+  border: solid 11px var(--color2);
   border-radius: 6px;
 }
 
 .pic2 {
-  border: solid 10px mintcream;
+  border: solid 10px var(--color3);
   outline: solid 1px #000080;
   border-radius: 6px;
 }
 .pic3 {
-  border: solid 10px mediumblue;
+  border: solid 10px var(--color1);
   border-radius: 6px;
+}
+
+
+/* firefox is not allowing me to use codespace from github, this should work, I hope */
+@media print {
+  
+  img {
+    display: none;
+  }
+
+  :root {
+    display: none;
+    --plyr-audio-controls-background: linear-gradient(180deg, #F72121 13.5%, #FFFFFF 46%, #6C72FF 92%);
+  
+  }
+  
+  a:after {
+    content: "goes to ->" attr( href );
+  }
+  
+    /* paper sizing */
+   @page {
+        margin: 2in;
+   }
+  
 }
